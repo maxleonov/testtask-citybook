@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h4>Components</h4>
+        <ul>
+            <li>
+                <b><a href="/api" target="_blank">API</a></b> provides REST interface. Currently there's only one object type to work with - City.</br>
+                Please note that when you open REST API in web-browser, so-called <a href="http://www.django-rest-framework.org/topics/browsable-api/" target="_blank">"Browsable API"</a> is used.</br>
+                When you add format suffix (<b>.json</b>, <b>.xml</b>) and/or open URL with curl, you get response in specified format (json by default), e.g.:</br>
+                <div class="well well-sm">
+                <a href="/api/city/Kyiv/.xml">/api/city/Kyiv/.xml</a></br>
+                <a href="/api/city/Kyiv/.json">/api/city/Kyiv/.json</a></br>
+                <a href="/api/city/Kyiv/">/api/city/Kyiv/</a></br>
+                </div>
+                <a href="/api/city/">/api/city/</a> provides access to basic operations on City objects: create, update, remove, list</br>
+                City names are used as Primary Key, so city/<CITY_NAME>/ returns details about City object with given name.
+            </li>
+            <li>
+                <b><a href="/admin" target="_blank">Admin</a></b> provides simple UI to manage Users and Cities.</br>
+                <i>Account: user/password</i>
+                </br>
+            </li>
+            <li>
+                <b><a href="/docs" target="_blank">API Docs</a></b> shows short description/demo for each REST endpoint available
+            </li>
+        </ul>
+        Technologies used: Python, Django, Django REST Framework, REST Framework Swagger, MySQL, Twitter Bootstrap.
+    </div>
+{% endblock %}

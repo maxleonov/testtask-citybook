@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>{% block title %}Test Task - Part 2{% endblock %}</title>
+</head>
+
+<body>
+    {% include "navbar.html" %}
+    <div id="content" class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
